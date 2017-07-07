@@ -43,6 +43,10 @@
             android:name="com.zhan.bottle.ui.activitys.SettingActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar.Swipe"></activity>
+        <activity
+            android:name="com.zhan.bottle.ui.activitys.AboutActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar.Swipe"></activity>
 
 
         <activity
