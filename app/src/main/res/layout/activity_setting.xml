@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top_bar"></include>
+
+    <View style="@style/BreakLine"></View>
+
+    <LinearLayout
+        style="@style/ItemPadding20_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="声音提示" />
+
+        <ch.ielse.view.SwitchView
+            android:id="@+id/voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:primaryColor="@color/tab_selected"
+            app:primaryColorDark="@color/view_default_press_color" />
+    </LinearLayout>
+
+    <View style="@style/BreakLine"></View>
+
+    <LinearLayout
+        style="@style/ItemPadding20_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="震动提示" />
+
+        <ch.ielse.view.SwitchView
+            android:id="@+id/vibrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:primaryColor="@color/tab_selected"
+            app:primaryColorDark="@color/view_default_press_color" />
+    </LinearLayout>
+
+    <View style="@style/BreakLine"></View>
+
+    <TextView
+        android:id="@+id/clear_cache"
+        style="@style/ItemPadding20_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@mipmap/arrow_right"
+        android:text="清理缓存" />
+
+    <View style="@style/BreakLine"></View>
+
+    <TextView
+        android:id="@+id/about"
+        style="@style/ItemPadding20_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@mipmap/arrow_right"
+        android:text="关于" />
+
+    <View style="@style/BreakLine"></View>
+
+    <TextView
+        android:id="@+id/check_version"
+        style="@style/ItemPadding20_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@mipmap/arrow_right"
+        android:text="检查更新" />
+
+    <View
+        style="@style/BreakLine"
+        android:layout_marginBottom="@dimen/dp_20"></View>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/btn_round_selecotr"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+</LinearLayout>

@@ -13,11 +13,16 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.zhan.bottle.R;
 import com.zhan.bottle.model.User;
+import com.zhan.bottle.model.event.LoginEvent;
 import com.zhan.bottle.model.service.UserManager;
 import com.zhan.bottle.ui.activitys.LoginActivity;
+import com.zhan.bottle.ui.activitys.SettingActivity;
 import com.zhan.bottle.ui.activitys.UserInfoActivity;
 import com.zhan.bottle.ui.base.BaseFragment;
 import com.zhan.bottle.utils.Constact;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -89,6 +94,11 @@ public class TabMeFragment extends BaseFragment {
         }
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onLoginEvent(LoginEvent event) {
+        setUserInfo();
+    }
+
     @OnClick({R.id.user_layout, R.id.gift, R.id.vip, R.id.market, R.id.task, R.id.setting})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -108,6 +118,7 @@ public class TabMeFragment extends BaseFragment {
             case R.id.task:
                 break;
             case R.id.setting:
+                to(SettingActivity.class);
                 break;
         }
     }

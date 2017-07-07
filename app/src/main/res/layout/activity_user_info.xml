@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <ScrollView
+    <com.zhan.bottle.ui.widget.VerticalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -23,6 +23,15 @@
                     android:layout_height="700dp"></android.support.v4.view.ViewPager>
 
                 <LinearLayout
+                    android:id="@+id/point_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/location_time"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/gallery"
@@ -80,7 +89,7 @@
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
-    </ScrollView>
+    </com.zhan.bottle.ui.widget.VerticalScrollView>
 
     <ImageView
         android:id="@+id/back"

@@ -41,4 +41,11 @@
         <item name="android:layout_height">@dimen/dp_.5</item>
         <item name="android:background">@color/divider</item>
     </style>
+
+    <style name="ItemPadding20_15">
+        <item name="android:paddingLeft">@dimen/dp_20</item>
+        <item name="android:paddingRight">@dimen/dp_20</item>
+        <item name="android:paddingTop">@dimen/dp_15</item>
+        <item name="android:paddingBottom">@dimen/dp_15</item>
+    </style>
 </resources>

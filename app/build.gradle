@@ -38,6 +38,8 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
     compile 'com.github.lovetuzitong:MultiImageSelector:1.2'
     compile 'com.github.yalantis:ucrop:2.2.1'
+
+    compile 'ch.ielse:switchbutton:1.0.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/open_sdk_r5793_lite.jar')
 }

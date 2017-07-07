@@ -103,4 +103,16 @@ public class DeviceUtils {
         }
         return 0;
     }
+
+    public static String getVersionName() {
+        PackageManager pm = Application.getApp().getPackageManager();//context为当前Activity上下文
+        PackageInfo pi = null;
+        try {
+            pi = pm.getPackageInfo(Application.getApp().getPackageName(), 0);
+            return pi.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

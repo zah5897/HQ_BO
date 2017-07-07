@@ -72,10 +72,7 @@
         android:drawablePadding="@dimen/dp_10"
         android:drawableRight="@mipmap/arrow_right"
         android:gravity="center_vertical"
-        android:paddingBottom="@dimen/dp_15"
-        android:paddingLeft="@dimen/dp_20"
-        android:paddingRight="@dimen/dp_20"
-        android:paddingTop="@dimen/dp_15"
+        style="@style/ItemPadding20_15"
         android:text="我的礼物" />
 
     <View style="@style/BreakLine"></View>
@@ -89,16 +86,14 @@
         android:drawablePadding="@dimen/dp_10"
         android:drawableRight="@mipmap/arrow_right"
         android:gravity="center_vertical"
-        android:paddingBottom="@dimen/dp_15"
-        android:paddingLeft="@dimen/dp_20"
-        android:paddingRight="@dimen/dp_20"
-        android:paddingTop="@dimen/dp_15"
+        style="@style/ItemPadding20_15"
         android:text="会员中心" />
 
     <View style="@style/BreakLine"></View>
 
     <TextView
         android:id="@+id/market"
+        style="@style/ItemPadding20_15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/view_default_selecotr"
@@ -106,16 +101,13 @@
         android:drawablePadding="@dimen/dp_10"
         android:drawableRight="@mipmap/arrow_right"
         android:gravity="center_vertical"
-        android:paddingBottom="@dimen/dp_15"
-        android:paddingLeft="@dimen/dp_20"
-        android:paddingRight="@dimen/dp_20"
-        android:paddingTop="@dimen/dp_15"
         android:text="贝壳市场" />
 
     <View style="@style/BreakLine"></View>
 
     <TextView
         android:id="@+id/task"
+        style="@style/ItemPadding20_15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/view_default_selecotr"
@@ -123,16 +115,13 @@
         android:drawablePadding="@dimen/dp_10"
         android:drawableRight="@mipmap/arrow_right"
         android:gravity="center_vertical"
-        android:paddingBottom="@dimen/dp_15"
-        android:paddingLeft="@dimen/dp_20"
-        android:paddingRight="@dimen/dp_20"
-        android:paddingTop="@dimen/dp_15"
         android:text="奖励任务" />
 
     <View style="@style/BreakLine"></View>
 
     <TextView
         android:id="@+id/setting"
+        style="@style/ItemPadding20_15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/view_default_selecotr"
@@ -140,10 +129,6 @@
         android:drawablePadding="@dimen/dp_10"
         android:drawableRight="@mipmap/arrow_right"
         android:gravity="center_vertical"
-        android:paddingBottom="@dimen/dp_15"
-        android:paddingLeft="@dimen/dp_20"
-        android:paddingRight="@dimen/dp_20"
-        android:paddingTop="@dimen/dp_15"
         android:text="软件设置" />
 
     <View style="@style/BreakLine"></View>

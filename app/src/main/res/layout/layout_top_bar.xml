@@ -9,6 +9,7 @@
         android:layout_width="40dp"
         android:layout_height="match_parent"
         android:background="@drawable/view_default_selecotr"
+        android:padding="@dimen/dp_5"
         android:src="@mipmap/back" />
 
     <TextView

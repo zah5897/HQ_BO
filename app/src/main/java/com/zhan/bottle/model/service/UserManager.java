@@ -2,11 +2,13 @@ package com.zhan.bottle.model.service;
 
 import com.google.gson.Gson;
 import com.zhan.bottle.model.User;
+import com.zhan.bottle.model.event.LoginEvent;
 import com.zhan.bottle.utils.Constact;
 import com.zhan.bottle.utils.PrefUtil;
 import com.zhan.bottle.utils.http.HttpHelper;
 import com.zhan.bottle.utils.http.RequestParam;
 
+import org.greenrobot.eventbus.EventBus;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -114,6 +116,7 @@ public class UserManager {
                         loginUser = user;
                         PrefUtil.get().putString(CACHE_ACCOUNT_KEY, userJson.toString());
                         callback.onResult(user);
+                        EventBus.getDefault().post(new LoginEvent(false));
                     } else {
                         callback.onFailed(code, msg);
                     }
@@ -168,6 +171,7 @@ public class UserManager {
                         loginUser = user;
                         PrefUtil.get().putString(CACHE_ACCOUNT_KEY, userJson.toString());
                         callback.onResult(user);
+                        EventBus.getDefault().post(new LoginEvent(false));
                     } else {
                         callback.onFailed(code, msg);
                     }
@@ -181,6 +185,12 @@ public class UserManager {
 
     public boolean isLogin() {
         return loginUser != null;
+    }
+
+    public void logout() {
+        loginUser = null;
+        PrefUtil.get().remove(CACHE_ACCOUNT_KEY);
+        EventBus.getDefault().post(new LoginEvent(false));
     }
 
 
