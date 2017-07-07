@@ -85,14 +85,16 @@
         </LinearLayout>
     </LinearLayout>
 
-    <Button
+    <TextView
         android:id="@+id/login"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/input_layout"
         android:layout_margin="@dimen/dp_10"
         android:background="@drawable/btn_round_selecotr"
         android:gravity="center"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
         android:text="登录"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_16" />

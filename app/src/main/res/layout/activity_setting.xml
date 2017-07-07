@@ -88,12 +88,14 @@
         style="@style/BreakLine"
         android:layout_marginBottom="@dimen/dp_20"></View>
 
-    <Button
+    <TextView
         android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_20"
         android:background="@drawable/btn_round_selecotr"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
         android:text="退出登录"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_18" />

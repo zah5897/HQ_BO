@@ -9,8 +9,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.zhan.bottle.R;
 import com.zhan.bottle.model.service.AppService;
+import com.zhan.bottle.model.service.BottleService;
 import com.zhan.bottle.model.service.UserManager;
 import com.zhan.bottle.ui.base.BaseSwipeBackActivity;
 import com.zhan.bottle.ui.widget.HQMaterialProgressTip;
@@ -41,7 +43,7 @@ public class SettingActivity extends BaseSwipeBackActivity {
     @BindView(R.id.check_version)
     TextView checkVersion;
     @BindView(R.id.logout)
-    Button logout;
+    TextView logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,10 +79,23 @@ public class SettingActivity extends BaseSwipeBackActivity {
                 PrefUtil.get().putBoolean("vibrate", vibrate.isOpened());
                 break;
             case R.id.clear_cache:
+                BottleService.get().doTask(new Runnable() {
+                    @Override
+                    public void run() {
+                        Glide.get(SettingActivity.this.getApplicationContext()).clearDiskCache();
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                showToast("缓存清理完毕");
+                            }
+                        });
+                    }
+                });
                 break;
             case R.id.about:
                 break;
             case R.id.check_version:
+                checkVersion();
                 break;
         }
     }
