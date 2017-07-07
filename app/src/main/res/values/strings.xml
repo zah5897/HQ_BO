@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HQ_BO</string>
+
+    <string name="tab_sea">海边</string>
+    <string name="tab_find">发现</string>
+    <string name="tab_wish">许愿墙</string>
+    <string name="tab_me">我</string>
+
+    <string name="username">帐号</string>
+    <string name="pwd">密码</string>
+    <string name="repwd">確定密码</string>
+
+
+    <string name="page_init">页面初始化中...</string>
+    <string name="page_err">页面初始化失败</string>
+    <string name="page_reload_load">重新加载</string>
+
+    <string name="to_regist_tip">没有帐号？&lt;font color=\"#45c01a\">去注册&lt;/font></string>
+</resources>

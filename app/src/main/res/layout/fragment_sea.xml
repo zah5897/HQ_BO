@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.zhan.bottle.ui.widget.SunView
+        android:id="@+id/shining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sky_bg" />
+
+    <com.zhan.bottle.ui.widget.BottlePoolView
+        android:id="@+id/bottle_pool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shining"
+        android:background="@drawable/sea_bg"
+        android:paddingBottom="@dimen/dp_20"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_20">
+
+    </com.zhan.bottle.ui.widget.BottlePoolView>
+
+    <TextView
+        android:id="@+id/throw_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dp_20"
+        android:drawableTop="@mipmap/bottle_to_send"
+        android:text="扔一个"
+        android:textSize="@dimen/sp_12" />
+</RelativeLayout>

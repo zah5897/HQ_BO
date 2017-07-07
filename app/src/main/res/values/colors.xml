@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#00C8FE</color>
+
+
+    <color name="start">#4CDFFD</color>
+    <color name="end">#00A0D2</color>
+
+    <!-- TabLayout -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+
+    <color name="view_default_press_color">#22000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="tab_normal">#8A8A8A</color>
+    <color name="tab_selected">#00C8FE</color>
+    <color name="tab_tv_normal">@color/tab_normal</color>
+    <color name="tab_tv_selected">@color/tab_selected</color>
+
+    <color name="divider">#dbdbdb</color>
+
+    <color name="black_68">#686A68</color>
+    <color name="black_64">#888A84</color>
+
+
+</resources>
